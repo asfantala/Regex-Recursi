@@ -1,0 +1,23 @@
+{
+  "name": "regex-recursi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asfantala/Regex-Recursi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asfantala/Regex-Recursi/issues"
+  },
+  "homepage": "https://github.com/asfantala/Regex-Recursi#readme",
+  "dependencies": {
+    "jest": "^29.4.3"
+  }
+}
