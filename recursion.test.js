@@ -19,17 +19,24 @@ function division(number, dividedBy) {
         dividedBy = -dividedBy;
       }
       
-      while (number >= dividedBy) {
-        let temp = dividedBy;
-        let i = 1;
-        while (number >= temp + temp) {
-          temp += temp;
-          i += i;
-        }
-        number -= temp;
-        quotient += i;
-      }
-      
+        function calculateQuotient(n, divisor) {
+    if (n < divisor) {
+      return 0;
+    }
+    
+    let temp = divisor;
+    let i = 1;
+    
+    while (n >= temp + temp) {
+      temp += temp;
+      i += i;
+    }
+
+    return i + calculateQuotient(n - temp, divisor);
+  }
+
+  quotient = calculateQuotient(number, dividedBy);
+  
       return sign * quotient;
    
 
@@ -62,15 +69,22 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
     // Write you logic here.
-    let a=0;
-    let b=1;
-    for(let i=0;i<n;i++){
+  //   let a=0;
+  //   let b=1;
+  //   for(let i=0;i<n;i++){
 
-        const c = a + b;
-    a = b;
-    b = c;
+  //       const c = a + b;
+  //   a = b;
+  //   b = c;
+  // }
+  // return a;
+    if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
-  return a;
     }
 
 
